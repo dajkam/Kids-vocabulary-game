@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Parents">
+
+    <TextView
+        android:layout_width="63dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="language"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        tools:layout_editor_absoluteX="134dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="english"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="polish"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="114dp" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <Button
+        android:layout_width="178dp"
+        android:layout_height="69dp"
+        android:text="about"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="262dp" />
+
+    <Button
+        android:layout_width="367dp"
+        android:layout_height="75dp"
+        android:text=" rate us!"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="436dp" />
+</android.support.constraint.ConstraintLayout>
