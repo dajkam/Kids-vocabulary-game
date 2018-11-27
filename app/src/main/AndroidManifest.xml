@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".parent" />
+        <activity android:name=".learn" />
+        <activity android:name=".learn2" />
+        <activity android:name=".quiz"></activity>
     </application>
 
 </manifest>
