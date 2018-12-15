@@ -4,59 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/tło"
     tools:context=".MainMenu">
 
     <Button
         android:id="@+id/QuizButton"
-        android:layout_width="234dp"
-        android:layout_height="61dp"
+        android:layout_width="408dp"
+        android:layout_height="131dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="84dp"
-        android:text="quiz"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/deskag"
+        android:text="QUIZ"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LearnButton" />
 
     <Button
         android:id="@+id/ParentsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_width="225dp"
+        android:layout_height="44dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="208dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/deskag"
         android:text="parents"
         app:layout_constraintBottom_toTopOf="@+id/LearnButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/LearnButton"
-        android:layout_width="234dp"
-        android:layout_height="61dp"
+        android:layout_width="411dp"
+        android:layout_height="136dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="124dp"
-        android:text="learn"
-        app:layout_constraintBottom_toTopOf="@+id/QuizButton"
+        android:background="@drawable/deskag"
+        android:text="LEARN"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="426dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="137dp"
+        android:layout_width="374dp"
+        android:layout_height="319dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/LearnButton"
+        android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kot" />
+        app:srcCompat="@drawable/pingwin" />
 </android.support.constraint.ConstraintLayout>
