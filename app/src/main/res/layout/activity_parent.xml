@@ -5,7 +5,7 @@
     android:id="@+id/MusicSwich"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".parent">
+    tools:context=".parents">
 
     <Button
         android:id="@+id/RateUsButton"
