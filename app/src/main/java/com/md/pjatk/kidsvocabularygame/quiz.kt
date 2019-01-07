@@ -8,11 +8,13 @@ import android.widget.ImageView
 import android.widget.Toast
 
 class quiz : AppCompatActivity() {
-    var mice_sound: MediaPlayer = MediaPlayer.create(this, R.raw.mice)
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
+        
+        var mice_sound: MediaPlayer = MediaPlayer.create(this, R.raw.mice)
 
         val play_button = findViewById<ImageView>(R.id.playButton)
         play_button.setOnClickListener{
