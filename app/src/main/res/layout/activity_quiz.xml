@@ -8,7 +8,7 @@
     tools:context=".quiz">
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/mouseButton"
         android:layout_width="287dp"
         android:layout_height="263dp"
         android:layout_marginStart="8dp"
@@ -16,13 +16,13 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/mysz"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton8"
+        app:layout_constraintBottom_toTopOf="@+id/birdButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/birdButton"
         style="@android:style/Widget.DeviceDefault.Light.ImageButton"
         android:layout_width="295dp"
         android:layout_height="283dp"
@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/playButton"
         android:layout_width="66dp"
         android:layout_height="67dp"
         app:srcCompat="@android:drawable/ic_media_play"
