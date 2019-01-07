@@ -10,8 +10,9 @@ class learn : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_learn)
+
     }
-    fun learnAnimals(view: View){
+    fun learnAnimals(){
         val learnAnimalsButton = Intent(this,learn2::class.java)
         startActivity(learnAnimalsButton)
     }

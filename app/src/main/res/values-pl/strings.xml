@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- name-->
+    <string name="app_name">GRA SŁOWNA DLA DZIECI</string>
+	<!-- main menu -->
+    <string name="quizButton">QUIZ</string>
+    <string name="learnButton">UCZ SIĘ</string>
+    <string name="parentsButton">RODZICE</string>
+	<!-- learn 2 -->
+    <string name="learnAnimalsButton">UCZ SIĘ ZWIERZAT</string>
+	<!-- parents -->
+    <string name="rateUsButton">OCEŃ NAS!</string>
+    <string name="aboutButton">O NAS</string>
+    <string name="languageText">język</string>
+    <string name="musicText">muzyka</string>
+    <string name="onText">włącz</string>
+    <string name="offText">wyłącz</string>
+
+</resources>
