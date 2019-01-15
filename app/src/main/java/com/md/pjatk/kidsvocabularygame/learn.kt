@@ -12,7 +12,7 @@ class learn : AppCompatActivity() {
         setContentView(R.layout.activity_learn)
 
     }
-    fun learnAnimals(){
+    fun learnAnimals(view: View){
         val learnAnimalsButton = Intent(this,learn2::class.java)
         startActivity(learnAnimalsButton)
     }

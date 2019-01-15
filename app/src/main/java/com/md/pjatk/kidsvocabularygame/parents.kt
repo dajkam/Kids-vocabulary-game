@@ -9,11 +9,14 @@ import android.view.View
 
 class parents : AppCompatActivity() {
 
+    var isMusicOn = false
+    var isLanduagePolish = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parent)
         //languageSwichHandling()
-       // musicSwichHandling()
+       // musicSwichHandling() // to jest alternatywne podejscie
         val language_swich_state = findViewById<Switch>(R.id.LanguageSwich)
         val music_swich_state = findViewById<Switch>(R.id.MusicSwich)
         language_swich_state.setOnClickListener{
@@ -66,12 +69,14 @@ class parents : AppCompatActivity() {
     fun changeLanguageToPolish(){
         val myToast = Toast.makeText(this,"Zmieniłeś język na Polski",Toast.LENGTH_SHORT)
         myToast.show()
+        isLanduagePolish = true
 
     }
 
     fun changeLanguageToEnglish(){
         val myToast = Toast.makeText(this,"You have changed language to English",Toast.LENGTH_SHORT)
         myToast.show()
+        isLanduagePolish = false
 
     }
 
@@ -91,11 +96,14 @@ class parents : AppCompatActivity() {
         val myToast = Toast.makeText(this,"Music On",Toast.LENGTH_SHORT)
         myToast.show()
 
+        isMusicOn = true
+
     }
 
     fun turnOffMusic(){
         val myToast = Toast.makeText(this,"Music Off",Toast.LENGTH_SHORT)
         myToast.show()
+        isMusicOn = false
 
     }
 

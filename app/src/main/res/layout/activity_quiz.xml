@@ -8,7 +8,7 @@
     tools:context=".quiz">
 
     <ImageButton
-        android:id="@+id/mouseButton"
+        android:id="@+id/miceButton"
         android:layout_width="287dp"
         android:layout_height="263dp"
         android:layout_marginStart="8dp"
