@@ -12,10 +12,11 @@ import android.widget.Toast
 class quiz : AppCompatActivity() {
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
+        
+        var mice_sound: MediaPlayer = MediaPlayer.create(this, R.raw.mice)
 
 
 
