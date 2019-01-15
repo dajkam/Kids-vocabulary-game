@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
 import com.md.pjatk.kidsvocabularygame.R.raw.bird
 
@@ -24,7 +25,7 @@ class learn2 : AppCompatActivity() {
 
 
 
-        val bird_button = findViewById<ImageButton>(R.id.birdButton)
+        val bird_button = findViewById<ImageView>(R.id.birdButton)
         bird_button.setOnClickListener{
             Toast.makeText(this,"Kliknołes ptaka",Toast.LENGTH_SHORT).show()
             bird_sound.start()
@@ -32,7 +33,7 @@ class learn2 : AppCompatActivity() {
 
     }
 
-        val mice_button = findViewById<ImageButton>(R.id.miceButton)
+        val mice_button = findViewById<ImageView>(R.id.miceButton)
         mice_button.setOnClickListener{
             Toast.makeText(this,"Kliknołes mysz",Toast.LENGTH_SHORT).show()
             mice_sound.start()
@@ -40,7 +41,7 @@ class learn2 : AppCompatActivity() {
 
         }
 
-        val pinguin_button = findViewById<ImageButton>(R.id.piguinButton)
+        val pinguin_button = findViewById<ImageView>(R.id.piguinButton)
         pinguin_button.setOnClickListener{
             Toast.makeText(this,"Kliknołes pingwina",Toast.LENGTH_SHORT).show()
             pinguin_sound.start()
@@ -48,7 +49,7 @@ class learn2 : AppCompatActivity() {
 
         }
 
-        val flower_button = findViewById<ImageButton>(R.id.flowerButton)
+        val flower_button = findViewById<ImageView>(R.id.flowerButton)
         flower_button.setOnClickListener{
             Toast.makeText(this,"Kliknołes kwiat",Toast.LENGTH_SHORT).show()
             flower_sound.start()
@@ -58,7 +59,9 @@ class learn2 : AppCompatActivity() {
 
 
 
+
     }
+
 
 }
 
