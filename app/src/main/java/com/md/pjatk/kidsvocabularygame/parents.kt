@@ -1,5 +1,6 @@
 package com.md.pjatk.kidsvocabularygame
 
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Switch
@@ -15,6 +16,9 @@ class parents : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parent)
+
+        var music: MediaPlayer = MediaPlayer.create(this, R.raw.ac)
+
         //languageSwichHandling()
        // musicSwichHandling() // to jest alternatywne podejscie
         val language_swich_state = findViewById<Switch>(R.id.LanguageSwich)
@@ -92,7 +96,14 @@ class parents : AppCompatActivity() {
         }
 
     }*/
+  var music: MediaPlayer = MediaPlayer.create(this, R.raw.ac)
+
     fun turnOnMusic(){
+
+        music.seekTo(0)
+
+        music.start()
+
         val myToast = Toast.makeText(this,"Music On",Toast.LENGTH_SHORT)
         myToast.show()
 
@@ -101,6 +112,9 @@ class parents : AppCompatActivity() {
     }
 
     fun turnOffMusic(){
+
+        music.stop()
+        music.seekTo(0)
         val myToast = Toast.makeText(this,"Music Off",Toast.LENGTH_SHORT)
         myToast.show()
         isMusicOn = false

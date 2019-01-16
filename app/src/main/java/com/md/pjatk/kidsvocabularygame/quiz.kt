@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
-
+import java.util.*
+import kotlin.concurrent.schedule
 
 
 class quiz : AppCompatActivity() {
@@ -17,13 +18,26 @@ class quiz : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
 
+        var mice_sound: MediaPlayer = MediaPlayer.create(this, R.raw.mice)
+        var position = 0
+
 
 
         val play_button = findViewById<ImageView>(R.id.playButton)
         play_button.setOnClickListener{
-            var mice_sound: MediaPlayer? = MediaPlayer.create(this, R.raw.mice)
 
-          mice_sound!!.start()
+            if (mice_sound.isPlaying()){
+                mice_sound.pause()
+                mice_sound.seekTo(0)
+            }
+
+            Timer().schedule(500){
+                mice_sound.start()
+            }
+
+
+
+
 
 
 

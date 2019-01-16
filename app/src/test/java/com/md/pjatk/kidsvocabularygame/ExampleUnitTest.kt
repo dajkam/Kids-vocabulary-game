@@ -35,7 +35,7 @@ class ExampleUnitTest {
 
 
     }
-
+    @Ignore
     @Test
     fun isMusicWorking(){
 
@@ -48,7 +48,7 @@ class ExampleUnitTest {
         assertEquals(false,rodzic.isMusicOn)
 
     }
-
+    @Ignore
     @Test
     fun isLanguageSwichWorking(){
         var rodzic = parents()
