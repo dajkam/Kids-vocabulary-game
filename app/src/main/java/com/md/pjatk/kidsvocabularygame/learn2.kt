@@ -49,13 +49,13 @@ class learn2 : AppCompatActivity() {
 
         }
 
-        val flower_button = findViewById<ImageView>(R.id.flowerButton)
-        flower_button.setOnClickListener{
-            Toast.makeText(this,"Kliknołes kwiat",Toast.LENGTH_SHORT).show()
-            flower_sound.start()
+      //  val flower_button = findViewById<ImageView>(R.id.flowerButton)
+      //  flower_button.setOnClickListener{
+      //      Toast.makeText(this,"Kliknołes kwiat",Toast.LENGTH_SHORT).show()
+       //     flower_sound.start()
 
 
-        }
+       // }
 
 
 
