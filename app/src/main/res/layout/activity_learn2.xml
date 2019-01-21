@@ -66,6 +66,6 @@
         android:text="Zwierzęta"
         android:textAlignment="center"
         android:textSize="45sp"
-        tools:text="Zwierzęta" />
+        tools:text="@string/animalsText" />
 
 </RelativeLayout>

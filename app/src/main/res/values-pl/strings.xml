@@ -15,5 +15,7 @@
     <string name="musicText">muzyka</string>
     <string name="onText">włącz</string>
     <string name="offText">wyłącz</string>
+    <string name="sSign">USTAWIENIA</string>
+    <string name="animalsText">Zwierzęta</string>
 
 </resources>

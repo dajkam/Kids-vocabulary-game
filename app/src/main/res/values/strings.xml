@@ -9,11 +9,13 @@
     <!-- learn 2 -->
     <string name="learnAnimalsButton">LEARN ANIMALS</string>
     <!-- parents -->
+    <string name="sSign">Settings</string>
     <string name="rateUsButton">RATE US!</string>
     <string name="aboutButton">ABOUT</string>
     <string name="languageText">language</string>
     <string name="musicText">music</string>
     <string name="onText">on</string>
     <string name="offText">off</string>
+    <string name="animalsText">ANIMALS</string>
 
 </resources>
