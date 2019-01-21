@@ -15,10 +15,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/deskag"
+        android:fontFamily="@font/bangers"
         android:onClick="quiz"
         android:text="@string/quizButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,14 +28,20 @@
 
     <Button
         android:id="@+id/ParentsButton"
-        android:layout_width="162dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="260dp"
+        android:layout_width="180dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginBottom="548dp"
         android:background="@drawable/deskag"
+        android:fontFamily="@font/bangers"
         android:onClick="parents"
         android:text="@string/parentsButton"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/LearnButton"
@@ -45,10 +52,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/deskag"
+        android:fontFamily="@font/bangers"
         android:onClick="learn"
         android:text="@string/learnButton"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textSize="30sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/QuizButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,5 +64,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Switch"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="240dp" />
 
 </android.support.constraint.ConstraintLayout>
