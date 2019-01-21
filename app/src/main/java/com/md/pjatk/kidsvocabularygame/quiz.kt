@@ -2,13 +2,13 @@
 package com.md.pjatk.kidsvocabularygame
 
 import android.media.MediaPlayer
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageButton
+import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.Toast
 import java.util.*
 import kotlin.concurrent.schedule
+
 
 
 class quiz : AppCompatActivity() {

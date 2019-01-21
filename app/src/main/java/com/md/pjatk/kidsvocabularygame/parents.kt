@@ -1,22 +1,38 @@
 package com.md.pjatk.kidsvocabularygame
 
+
 import android.content.Intent
+import android.content.Context
+
 import android.media.MediaPlayer
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Switch
 import android.widget.Toast
 
+
+
+
+
 class parents : AppCompatActivity() {
+    companion object {
+        var isMusicOn = false
+        var isLanduagePolish = false
+    }
+
 
     var isMusicOn = true
     var isLanduagePolish = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parent)
 
+
+
         var music: MediaPlayer = MediaPlayer.create(this, R.raw.ac)
+        music.isLooping = true
 
         //languageSwichHandling()
        // musicSwichHandling() // to jest alternatywne podejscie
@@ -25,6 +41,7 @@ class parents : AppCompatActivity() {
         language_switch_state.setOnClickListener{
             if (language_switch_state.isChecked){
 
+
                 changeLanguageToPolish()
 
             }
@@ -32,6 +49,7 @@ class parents : AppCompatActivity() {
                 changeLanguageToEnglish()
             }
         }
+
       music_switch_state.setOnClickListener{
             if (music_switch_state.isChecked){
                 stopService(Intent(this, MyService::class.java))
@@ -42,11 +60,30 @@ class parents : AppCompatActivity() {
                 startService(Intent(this, MyService::class.java))
 
             }
+
+
         }
 
 
 
 
+    }
+
+
+
+   override fun onStop(){
+       super.onStop()
+      // isMusicOn = this.MusicSwich.isChecked
+
+       
+
+
+
+    }
+
+    override  fun onResume(){
+        super.onResume()
+       // this.MusicSwich.isChecked = isMusicOn
     }
 
    /* fun onClick(view: View){
@@ -99,6 +136,7 @@ class parents : AppCompatActivity() {
     }
 /* var music: MediaPlayer = MediaPlayer.create(this, R.raw.ac)
 
+
   fun turnOnMusic(){
 
       music.seekTo(0)
@@ -112,6 +150,7 @@ class parents : AppCompatActivity() {
 
   }
 
+
   fun turnOffMusic(){
 
       music.stop()
@@ -120,7 +159,9 @@ class parents : AppCompatActivity() {
       myToast.show()
       isMusicOn = false
 
+
   }
+
 
 }
    }*/
