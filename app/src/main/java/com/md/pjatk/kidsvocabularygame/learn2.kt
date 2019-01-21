@@ -1,17 +1,15 @@
 package com.md.pjatk.kidsvocabularygame
 
-import android.content.Intent
 import android.media.MediaPlayer
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
+import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
-import android.widget.Toast
-import com.md.pjatk.kidsvocabularygame.R.raw.bird
+import kotlinx.android.synthetic.main.activity_learn2.*
 
 class learn2 : AppCompatActivity() {
+    companion object {
+        var inUse = false
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,28 +24,108 @@ class learn2 : AppCompatActivity() {
 
 
         val bird_button = findViewById<ImageView>(R.id.birdButton)
+        val mice_button = findViewById<ImageView>(R.id.miceButton)
+        val pinguin_button = findViewById<ImageView>(R.id.piguinButton)
+
+
         bird_button.setOnClickListener{
-            Toast.makeText(this,"Kliknołes ptaka",Toast.LENGTH_SHORT).show()
-            bird_sound.start()
+
+           // Toast.makeText(this,"Kliknołes ptaka",Toast.LENGTH_SHORT).show()
+            //  bird_sound.start()
+            if(inUse){
+            mice_button.isEnabled = false
+            bird_button.isEnabled =false
+            piguinButton.isEnabled = false}
+
+          /*  pinguin_button.isEnabled = false
+            bird_button.isEnabled = false
+            mice_button.isEnabled =false*/
+
+            if(!inUse) {
+                play_music(bird_sound)
+
+                mice_button.isEnabled = true
+                bird_button.isEnabled = true
+                piguinButton.isEnabled = true
+
+            }
 
 
     }
 
-        val mice_button = findViewById<ImageView>(R.id.miceButton)
+
         mice_button.setOnClickListener{
-            Toast.makeText(this,"Kliknołes mysz",Toast.LENGTH_SHORT).show()
-            mice_sound.start()
+
+           // Toast.makeText(this,"Kliknołes mysz",Toast.LENGTH_SHORT).show()
+           // mice_sound.start()
+            if(inUse){
+            mice_button.isEnabled = false
+            bird_button.isEnabled =false
+            piguinButton.isEnabled = false}
+
+
+
+
+            if(!inUse) {
+                play_music(mice_sound)
+
+
+
+
+                mice_button.isEnabled = true
+                bird_button.isEnabled = true
+                piguinButton.isEnabled = true
+            }
+
+
 
 
         }
 
-        val pinguin_button = findViewById<ImageView>(R.id.piguinButton)
+
         pinguin_button.setOnClickListener{
-            Toast.makeText(this,"Kliknołes pingwina",Toast.LENGTH_SHORT).show()
-            pinguin_sound.start()
+            //Toast.makeText(this,"Kliknołes pingwina",Toast.LENGTH_SHORT).show()
+            //pinguin_sound.start()
+            if(inUse){
+            mice_button.isEnabled = false
+            bird_button.isEnabled =false
+            piguinButton.isEnabled = false}
+
+            if(!inUse) {
+                play_music(pinguin_sound)
+
+
+                mice_button.isEnabled = true
+                bird_button.isEnabled = true
+                piguinButton.isEnabled = true
+            }
 
 
         }
+
+
+
+        }
+    fun play_music(sound: MediaPlayer){
+
+        var n =0
+
+        inUse = true
+
+        if (!sound.isPlaying)
+            sound.start()
+        while (sound.isPlaying){
+            n++
+
+        }
+
+        inUse = false
+
+
+
+
+
+    }
 
       //  val flower_button = findViewById<ImageView>(R.id.flowerButton)
       //  flower_button.setOnClickListener{
@@ -63,5 +141,5 @@ class learn2 : AppCompatActivity() {
     }
 
 
-}
+
 
