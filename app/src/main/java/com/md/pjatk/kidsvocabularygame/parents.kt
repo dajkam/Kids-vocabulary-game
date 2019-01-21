@@ -2,8 +2,6 @@ package com.md.pjatk.kidsvocabularygame
 
 
 import android.content.Intent
-import android.content.Context
-
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -16,8 +14,8 @@ import android.widget.Toast
 
 class parents : AppCompatActivity() {
     companion object {
-        var isMusicOn = false
-        var isLanduagePolish = false
+        //var isMusicOn = false
+        //var isLanduagePolish = false
     }
 
 
@@ -36,33 +34,38 @@ class parents : AppCompatActivity() {
 
         //languageSwichHandling()
        // musicSwichHandling() // to jest alternatywne podejscie
-        val language_switch_state = findViewById<Switch>(R.id.LanguageSwich)
+
+
+
         val music_switch_state = findViewById<Switch>(R.id.MusicSwich)
-        language_switch_state.setOnClickListener{
-            if (language_switch_state.isChecked){
 
 
-                changeLanguageToPolish()
 
-            }
-            else{
-                changeLanguageToEnglish()
-            }
-        }
+
+
+
+
 
       music_switch_state.setOnClickListener{
-            if (music_switch_state.isChecked){
-                stopService(Intent(this, MyService::class.java))
+          if (music_switch_state.isChecked){
+              startService(Intent(this, MyService::class.java))
+
+              isMusicOn = true
 
 
-            }
-            else{
-                startService(Intent(this, MyService::class.java))
+          }
+          else{
+              stopService(Intent(this, MyService::class.java))
 
-            }
+              isMusicOn = false
+
+          }
 
 
-        }
+      }
+
+
+        music_switch_state.isChecked = isMusicOn
 
 
 

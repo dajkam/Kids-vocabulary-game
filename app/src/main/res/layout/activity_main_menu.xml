@@ -65,13 +65,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="Switch"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="240dp" />
-
 </android.support.constraint.ConstraintLayout>
