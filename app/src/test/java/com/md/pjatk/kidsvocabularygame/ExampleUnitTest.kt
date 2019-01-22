@@ -30,24 +30,15 @@ class ExampleUnitTest {
 
     @Test
     fun emptyTest(){
-        assertEquals(false,parents().isLanduagePolish)
         assertEquals(false,parents().isMusicOn)
 
 
     }
     @Ignore
     @Test
-    fun isMusicWorking(){
 
 
-        var rodzic = parents()
-        rodzic.turnOnMusic()
-        assertEquals(true,rodzic.isMusicOn)
 
-        rodzic.turnOffMusic()
-        assertEquals(false,rodzic.isMusicOn)
-
-    }
     @Ignore
     @Test
     fun isLanguageSwichWorking(){

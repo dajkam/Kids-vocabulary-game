@@ -1,6 +1,7 @@
 
 package com.md.pjatk.kidsvocabularygame
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -44,13 +45,16 @@ class quiz : AppCompatActivity() {
 
         }
 
+
+
         val mice_button = findViewById<ImageView>(R.id.miceButton)
         mice_button.setOnClickListener{
             Toast.makeText(this,"Dobra odpowiedz",Toast.LENGTH_SHORT).show()
-
-
+            val next = Intent(this@quiz, quiz2::class.java)
+            startActivity(next)
 
         }
+
 
         val bird_button = findViewById<ImageView>(R.id.birdButton)
         bird_button.setOnClickListener{

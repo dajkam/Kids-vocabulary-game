@@ -20,7 +20,7 @@
         android:fontFamily="@font/bangers"
         android:inputType="textPersonName"
         android:onClick="learnAnimals"
-        android:text="Zwierzęta"
+        android:text="Animals"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/animalsButton"

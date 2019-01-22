@@ -20,6 +20,7 @@
         <activity android:name=".parents" />
         <activity android:name=".learn" />
         <activity android:name=".learn2" />
+        <activity android:name=".quiz2"/>
         <activity android:name=".quiz"></activity>
 
         <meta-data

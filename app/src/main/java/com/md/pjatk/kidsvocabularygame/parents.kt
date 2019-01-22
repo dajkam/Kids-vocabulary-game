@@ -36,19 +36,9 @@ class parents : AppCompatActivity() {
 
         //languageSwichHandling()
        // musicSwichHandling() // to jest alternatywne podejscie
-        val language_switch_state = findViewById<Switch>(R.id.LanguageSwich)
+       // val language_switch_state = findViewById<Switch>(R.id.LanguageSwich)
         val music_switch_state = findViewById<Switch>(R.id.MusicSwich)
-        language_switch_state.setOnClickListener{
-            if (language_switch_state.isChecked){
 
-
-                changeLanguageToPolish()
-
-            }
-            else{
-                changeLanguageToEnglish()
-            }
-        }
 
       music_switch_state.setOnClickListener{
             if (music_switch_state.isChecked){

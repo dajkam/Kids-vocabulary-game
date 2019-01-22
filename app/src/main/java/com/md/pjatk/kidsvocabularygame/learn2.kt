@@ -1,8 +1,11 @@
 package com.md.pjatk.kidsvocabularygame
 
+import android.graphics.PorterDuff
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.MotionEvent
+import android.view.View
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_learn2.*
 
@@ -14,6 +17,11 @@ class learn2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_learn2)
+        buttonEffect(birdButton)
+        buttonEffect(piguinButton)
+        buttonEffect(piguinButton2)
+        buttonEffect(miceButton)
+
 
         var bird_sound: MediaPlayer = MediaPlayer.create(this, R.raw.bird)
          // no need to call prepare(); create() does that for you
@@ -83,6 +91,7 @@ class learn2 : AppCompatActivity() {
         }
 
 
+
         pinguin_button.setOnClickListener{
             //Toast.makeText(this,"Kliknołes pingwina",Toast.LENGTH_SHORT).show()
             //pinguin_sound.start()
@@ -127,7 +136,24 @@ class learn2 : AppCompatActivity() {
 
     }
 
-      //  val flower_button = findViewById<ImageView>(R.id.flowerButton)
+    fun buttonEffect(button: View) {
+        button.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.background.setColorFilter(-0x1f0b8adf, PorterDuff.Mode.SRC_ATOP)
+                    v.invalidate()
+                }
+                MotionEvent.ACTION_UP -> {
+                    v.background.clearColorFilter()
+                    v.invalidate()
+                }
+            }
+            false
+        }
+    }
+
+
+    //  val flower_button = findViewById<ImageView>(R.id.flowerButton)
       //  flower_button.setOnClickListener{
       //      Toast.makeText(this,"Kliknołes kwiat",Toast.LENGTH_SHORT).show()
        //     flower_sound.start()
